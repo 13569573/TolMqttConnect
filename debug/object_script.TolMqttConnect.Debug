@@ -1,0 +1,11 @@
+debug/main.o
+debug/mainwindow.o
+debug/mqttconfigwindow.o
+debug/mqttmodel.o
+debug/mqttdelegate.o
+debug/zmotiondevice.o
+debug/moc_mainwindow.o
+debug/moc_mqttconfigwindow.o
+debug/moc_mqttmodel.o
+debug/moc_mqttdelegate.o
+debug/moc_zmotiondevice.o

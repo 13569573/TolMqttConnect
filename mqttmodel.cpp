@@ -16,6 +16,16 @@ MqttModel::MqttModel(QObject *parent)
 {
 }
 
+QString MqttModel::registerTypeText(int registerType)
+{
+    return s_registerTypes.value(registerType, "00_X");
+}
+
+QString MqttModel::writeTypeText(int writeType)
+{
+    return s_writeTypes.value(writeType, "0只读");
+}
+
 int MqttModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid())
@@ -189,6 +199,23 @@ void MqttModel::setItem(int row, const MqttItem &item)
     if (row < 0 || row >= m_items.count())
         return;
     m_items[row] = item;
+}
+
+QVector<MqttItem> MqttModel::items() const
+{
+    return m_items;
+}
+
+QVector<MqttItem> MqttModel::enabledItems() const
+{
+    QVector<MqttItem> result;
+    result.reserve(m_items.size());
+    for (const auto &item : m_items) {
+        if (item.enabled) {
+            result.append(item);
+        }
+    }
+    return result;
 }
 
 bool MqttModel::loadFromFile(const QString &filePath)

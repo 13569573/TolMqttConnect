@@ -21,6 +21,8 @@ class MqttModel : public QAbstractTableModel
 
 public:
     explicit MqttModel(QObject *parent = nullptr);
+    static QString registerTypeText(int registerType);
+    static QString writeTypeText(int writeType);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -35,6 +37,8 @@ public:
     void removeRow(int row);
     MqttItem getItem(int row) const;
     void setItem(int row, const MqttItem &item);
+    QVector<MqttItem> items() const;
+    QVector<MqttItem> enabledItems() const;
     bool saveToFile(const QString &filePath);
     bool loadFromFile(const QString &filePath);
     bool importFromExcel(const QString &filePath);

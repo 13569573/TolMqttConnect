@@ -102,33 +102,23 @@
                   <widget class="QLineEdit" name="topicEdit"/>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="labelTopic2">
-                   <property name="text">
-                    <string>Topic 2</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="1">
-                  <widget class="QLineEdit" name="topicEdit2"/>
-                 </item>
-                 <item row="4" column="0">
                   <widget class="QLabel" name="labelUser">
                    <property name="text">
                     <string>User</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="4" column="1">
+                 <item row="3" column="1">
                   <widget class="QLineEdit" name="userNameEdit"/>
                  </item>
-                 <item row="5" column="0">
+                 <item row="4" column="0">
                   <widget class="QLabel" name="labelPwd">
                    <property name="text">
                     <string>Password</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="5" column="1">
+                 <item row="4" column="1">
                   <widget class="QLineEdit" name="PassWordEdit">
                    <property name="echoMode">
                     <enum>QLineEdit::Password</enum>
@@ -613,13 +603,13 @@
            </widget>
           </item>
          </layout>
-        </item>
        </layout>
       </widget>
      </widget>
     </item>
    </layout>
   </widget>
+  <action name="action">
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -628,10 +618,10 @@
      <width>1200</width>
      <height>25</height>
     </rect>
-   </property>
+ </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
- </widget>
- <resources/>
  <connections/>
 </ui>
+ <connections/>
+

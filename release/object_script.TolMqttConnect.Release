@@ -1,0 +1,11 @@
+release/main.o
+release/mainwindow.o
+release/mqttconfigwindow.o
+release/mqttmodel.o
+release/mqttdelegate.o
+release/zmotiondevice.o
+release/moc_mainwindow.o
+release/moc_mqttconfigwindow.o
+release/moc_mqttmodel.o
+release/moc_mqttdelegate.o
+release/moc_zmotiondevice.o

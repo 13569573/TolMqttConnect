@@ -1,5 +1,9 @@
 
 
+QT += core gui network mqtt axcontainer
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
 CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -9,13 +13,20 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    mqttconfigwindow.cpp \
     mqttmodel.cpp \
-    mqttdelegate.cpp
+    mqttdelegate.cpp \
+    zmotiondevice.cpp
 
 HEADERS += \
     mainwindow.h \
+    mqttconfigwindow.h \
     mqttmodel.h \
-    mqttdelegate.h
+    mqttdelegate.h \
+    ui_mainwindow.h \
+    ui_mqttconfigwindow.h \
+    zmotiondevice.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    mqttconfigwindow.ui
